@@ -1,0 +1,4 @@
+1. Nghiệp vụ Nhập hàng
+2. Nghiệp vụ Báo cáo thống kê
+3. Nghiệp vụ Bán hàng
+4. Nghiệp vụ Mua hàng

@@ -1,0 +1,9 @@
+1. Giao diện Đăng nhập
+2. Giao diện Đăng ký
+3. Giao diện Index
+4. Giao diện Admin
+5. Giao diện Sản phẩm
+6. Giao diện Tìm kiếm
+7. Giao diện Đặt hàng và thanh toán
+8. Giao diện Khách hàng
+9. Lịch sử mua hàng
