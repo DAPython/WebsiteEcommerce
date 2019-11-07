@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<title> Register | TechShop </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/validateForm.js') }}">
+    	<link rel="stylesheet" href={{ url_for('static', filename='css/reset.css')}} />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/styles.css') }} />
+    </script>
+</head>
+
+<body>
+    <section class="login-section">
+        <form action="/register" method="POST" onsubmit="return validate()" class="login-form">
+            <h1>REGISISTER</h1>
+            <div class="txt">
+                <input type="email" name="email">
+                <span data-placeholder="Email"></span>
+            </div>
+
+            <div class="txt">
+                <input type="text" name="name">
+                <span data-placeholder="Full Name"></span>
+            </div>
+
+            <div class="txt">
+                <input type="text" name="address">
+                <span data-placeholder="Address"></span>
+            </div>
+
+            <div class="txt">
+                <input type="text" name="phone">
+                <span data-placeholder="Phone Number"></span>
+            </div>
+
+            <div class="txt">
+                <input type="password" name="password" id="password" required>
+                <span data-placeholder="Password"></span>
+            </div>
+
+            <div class="txt">
+                <input type="password" name="cpassword" id="cpassword">
+                <span data-placeholder="Confirm Password"></span>
+            </div>
+
+            <input type="submit" class="btn-login" value="SIGN UP">
+
+            <div class="bottom-text">
+                <a href="/loginPage">Login here</a>
+            </div>
+        </form>
+    </section>
+    
+    <script type="text/javascript">
+		$(".txt input").on("focus",function(){
+		  $(this).addClass("focus");
+		});
+	
+		$(".txt input").on("blur",function(){
+		  if($(this).val() == "")
+		  $(this).removeClass("focus");
+		});
+		</script>
+</body>
+
+</html>

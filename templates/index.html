@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="uft-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href={{ url_for('static', filename='css/reset.css')}} />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
@@ -13,7 +13,26 @@
       <title>Home Page</title>
     </head>
     <body>
-        <h1>Hello</h1>
-        <a href={{ url_for('ab') }}>Ab</a>
+        <header>
+            <nav>
+                <input type="checkbox" id="nav" class="hidden">
+                <label for="nav" class="nav-btn">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+                <div class="logo"><a href="/">TechShop</a></div>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Shopping</a></li>
+                        {% if not loggedIn %}
+                        <li><a class="btn_login" href="/loginPage">Login</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </header>
     </body>
 </html>
